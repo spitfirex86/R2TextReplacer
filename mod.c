@@ -61,7 +61,7 @@ BOOL fn_bReadLanguageTable( int lId, char const *szName, FON_tdstLanguage *p_stL
 		unsigned short uwIndex;
 		char szBuffer[1024];
 
-		if ( fscanf(hFile, "%hu=%511[^\n]\n", &uwIndex, szBuffer) == 2 )
+		if ( fscanf(hFile, "%hu=%1023[^\n]\n", &uwIndex, szBuffer) == 2 )
 		{
 			char *szString = malloc(strlen(szBuffer) + 1);
 			if ( !szString ) continue;
