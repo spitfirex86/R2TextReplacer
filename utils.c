@@ -15,7 +15,7 @@ int fn_lMessageBox( char *szText, UINT uType )
 
 void fn_vCreatePrerequisites( void )
 {
-	CreateDirectory(".\\Languages", NULL);
+	CreateDirectory(g_szLangDir, NULL);
 
 	fn_vWriteLangToIni(C_CommonLang, "");
 	for ( int i = 0; i < GAM_g_stEngineStructure->ucNbLanguages; i++ )

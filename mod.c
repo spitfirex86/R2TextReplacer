@@ -22,6 +22,8 @@ void fn_vDumpLanguageTable( FON_tdstLanguage *p_stLanguage, char const *szName )
 	char szFileName[MAX_PATH];
 	sprintf(szFileName, "%s\\%s.tbl", g_szLangDir, szName);
 
+	CreateDirectoryA(g_szLangDir, NULL);
+
 	FILE *hFile = fopen(szFileName, "w");
 	if ( !hFile )
 		return;
