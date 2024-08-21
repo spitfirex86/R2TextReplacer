@@ -5,4 +5,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <detours.h>
+
+#define ACP_NOX
 #include <ACP_Ray2.h>
